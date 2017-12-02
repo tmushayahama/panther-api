@@ -1,0 +1,127 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: Panther API
+# during dev, should point to your local machine
+host: localhost:10010
+# basePath prefixes all resource paths 
+basePath: /
+# 
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+paths:
+  /OverrepresentationTest:
+    x-swagger-router-controller: hellottt
+    get:
+      tags:
+      - overrep
+      summary: Returns Overrepresentation Test
+      description: Returns a map of status codes to quantities
+      operationId: overrep
+      produces:
+      - application/json
+      parameters:
+        - name: input
+          in: query
+          description: List of reference genes to be used for the analysis
+          required: true
+          type: string
+        - name: ontology
+          in: query
+          description: Annotation Data Set
+          required: true
+          type: string
+          enum: ['GO:0003674', 'GO:0008150', 'GO:0005575']
+        - name: species
+          in: query
+          description: List of species
+          required: true
+          type: string
+        - name: test_type
+          in: query
+          description: Test types
+          required: true
+          type: string
+        - name: correction
+          in: query
+          description: Correction
+          required: true
+          type: string
+        - name: input_type
+          in: query
+          description: Variant Cell Format.  Currently we support VCF version 4.0 formatthe list of reference genes to be used for the analysis
+          required: true
+          type: string
+        - name: flanking_region
+          in: query
+          description: Max offset range for SNP position to gene position.  This is used for VCF files.
+          required: true
+          type: string
+      responses:
+        200:
+          description: successful operation
+          schema:
+            $ref: "#/definitions/OverrepResponse"
+  /swagger:
+    x-swagger-pipe: swagger_raw
+definitions:
+  OverrepResponse:
+    type: object
+    required:
+      - results
+    properties:
+      results:
+        type: array
+        items:
+          type: object
+          properties:
+            reference: 
+              type: object
+              properties:
+                mapped_count: 
+                  type: integer
+                unmapped_count: 
+                  type: integer
+            input_list: 
+              type: object
+              properties:
+                mapped_count:
+                  type: integer
+                mapped_id:
+                  type: array
+                  items:
+                    type: integer
+                unmapped_count:
+                  type: integer
+                unmapped_id:
+                  type: string
+            result: 
+              type: array
+              items:
+                properties:
+                  number_in_list: 
+                    type: integer
+                  expected: 
+                    type: integer
+                  number_in_reference: 
+                    type: integer
+                  pValue: 
+                    type: integer
+                  term: 
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      label: 
+                        type: string
+                  plus_minus: 
+                    type: string
+            
