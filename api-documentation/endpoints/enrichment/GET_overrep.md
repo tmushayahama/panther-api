@@ -1,4 +1,4 @@
-# Photo Resources
+# Enrichment Overrepresentation Resources
 
     GET enrichment/overrep
 

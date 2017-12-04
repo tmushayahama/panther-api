@@ -6,9 +6,7 @@ Panther API provides
 
 #### Enrichment
 - **[<code>GET</code> enrichment/overrep](https://github.com/tmushayahama/panther-api/blob/master/api-documentation/endpoints/enrichment/GET_overrep.md)**
-
-​***
-
+​
 ## Development
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
@@ -17,14 +15,10 @@ These instructions will get you a copy of the project up and running on your loc
 $ npm install -g swagger
 ```
 ​
-​***
-
 ### Install Dependencies​
 ```bash
 $ npm install
 ```
-
-​***
 
 ### Run the server​
 ```bash
@@ -35,8 +29,6 @@ Then, open a second command line and launch the editor with:
 ```bash
 $ swagger project edit
 ```
-​
-​***
 
 [Good API development guidelines](https://github.com/WhiteHouse/api-standards/blob/master/README.md)
 
