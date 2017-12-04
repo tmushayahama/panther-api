@@ -16,21 +16,26 @@ module.exports = {
  *
  */
 function overrep(req, res) {
-  var gene = "";
+  var ontology = "";
+  var species = "HUMAN"
+  var corection = "bonferroni";
+  var input = "fake%0AMSH2%0AMSH3";
 
-  if (req.ontology == "GO:44444") {
-    gene = "molecular_fnc"
+  if (req.ontology == "GO:0003674") {
+    ontology = "molecular_function"
   }
 
-  //var city = req.swagger.params.city.value;
-  //var url = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=imperial";
 
-  // var url = "http://go.pantherdb.org/webservices/go/overrep.jsp?ontology=biological_process&species=HUMAN&correction=bonferroni&input=fake%0AMSH2%0AMSH3&format=json"
+  var url = "http://go.pantherdb.org/webservices/go/overrep.jsp?ontology=" +
+    ontology + "&species=" +
+    species + "&correction=" +
+    correction + "&input=" +
+    input + "&format=json"
   //console.log('Executing request: ' + url);
-  //request.get(url).pipe(res);
+  request.get(url).pipe(res);
 
   // this sends back a JSON response which is a single string
-  res.json("hello");
+  //res.json("hello");
   /*
     examples:
       application / json: | -{
