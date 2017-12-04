@@ -5,7 +5,7 @@ Panther API provides
 ## Endpoints
 
 #### Enrichment
-- **[<code>GET</code> enrichment/overrep](tmushayahama/panther-api/blob/master/api-documentation/endpoints/enrichment/GET_overrep.md)**
+- **[<code>GET</code> enrichment/overrep](https://github.com/tmushayahama/panther-api/blob/master/api-documentation/endpoints/enrichment/GET_overrep.md)**
 
 ​***
 
