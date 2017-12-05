@@ -15,7 +15,7 @@ Returns Overrepresentation Test
 - **species**  _(required)_ -
 - **test_type**
 - **correction**
-- **input_type**  Variant Cell Format. Currently we support VCF version 4.0 formatthe list of reference genes to be used for the analysis
+- **input_type**  Variant Call Format. Currently we support VCF version 4.0 formatthe list of reference genes to be used for the analysis
 - **flanking_region** Max offset range for SNP position to gene position.  This is used for VCF files.
 
 ***
