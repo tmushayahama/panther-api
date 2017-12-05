@@ -14,14 +14,14 @@ consumes:
 produces:
   - application/json
 paths:
-  /overrep:
-    x-swagger-router-controller: overrep
+  /enrichment/overrep:
+    x-swagger-router-controller: enrichment/overrep
     get:
       tags:
       - overrep
       summary: Returns Overrepresentation Test
       description: Returns a map of status codes to quantities
-      operationId: overrep
+      operationId: getOverrep
       produces:
       - application/json
       parameters:

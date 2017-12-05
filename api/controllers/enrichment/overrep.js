@@ -5,7 +5,7 @@ var request = require('request');
 
 
 module.exports = {
-  overrep: overrep
+  getOverrep: getOverrep
 };
 
 /**
@@ -15,7 +15,7 @@ module.exports = {
  * res: a handle to the response object
  *
  */
-function overrep(req, res) {
+function getOverrep(req, res) {
   var ontology = "";
   var species = "HUMAN"
   var corection = "bonferroni";
@@ -26,11 +26,11 @@ function overrep(req, res) {
   }
 
 
-  var url = "http://go.pantherdb.org/webservices/go/overrep.jsp?ontology=" +
-    ontology + "&species=" +
-    species + "&correction=" +
-    correction + "&input=" +
-    input + "&format=json"
+  var url = "http://go.pantherdb.org/webservices/go/overrep.jsp?ontology=" + ontology +
+    "&species=" + species +
+    "&correction=" + correction +
+    "&input=" + input +
+    "&format=json"
   //console.log('Executing request: ' + url);
   request.get(url).pipe(res);
 
