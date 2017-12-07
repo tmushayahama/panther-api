@@ -98,7 +98,7 @@ None
           }
         },
         "INPUT": {
-          "DESCRIPTION": "Gene names, Gene symbols, Protein ids" 
+          "DESCRIPTION": "Gene names, Gene symbols, Protein ids delimited by newline" 
         }
       }
    }
