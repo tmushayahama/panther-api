@@ -14,6 +14,21 @@ consumes:
 produces:
   - application/json
 paths:
+  /config:
+    x-swagger-router-controller: config/config
+    get:
+      tags:
+      - config
+      summary: Returns configuration data
+      description: Returns a list of supported input data
+      operationId: getConfig
+      produces:
+      - application/json
+      responses:
+        200:
+          description: successful operation
+          schema:
+            $ref: "#/definitions/ConfigResponse"
   /enrichment/overrep:
     x-swagger-router-controller: enrichment/overrep
     get:
@@ -67,6 +82,18 @@ paths:
           schema:
             $ref: "#/definitions/OverrepResponse"
 definitions:
+  ConfigResponse:
+    type: object
+    required:
+      - supported_input
+    properties:
+      supported_input: 
+        type: object
+        properties:
+          ontology: 
+            type: object
+          test_type: 
+            type: object
   OverrepResponse:
     type: object
     required:

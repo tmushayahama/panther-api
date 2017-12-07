@@ -1,4 +1,4 @@
-# Enrichment Overrepresentation Resources
+# Configuration Resources
 
     GET config
 
@@ -15,7 +15,7 @@ Returns Config
 ## Return format
 A object with the following keys and values.
 
-- **supported_inpout** - Supported Input
+- **supported_input** - Supported Input
 
 
 ***
