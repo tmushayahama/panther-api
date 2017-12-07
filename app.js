@@ -16,7 +16,7 @@ var corsOptions = {
       callback(null, false);
     } else {
       // change wordnik.com to your allowed domain. 
-      var match = origin.match("^(.*)?.wordnik.com(\:[0-9]+)?");
+      var match = origin.match("*");
       var allowed = (match !== null && match.length > 0);
       callback(null, allowed);
     }

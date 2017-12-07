@@ -6,6 +6,7 @@ Panther API provides
 
 #### Enrichment
 - **[<code>GET</code> enrichment/overrep](https://github.com/tmushayahama/panther-api/blob/master/api-documentation/endpoints/enrichment/GET_overrep.md)**
+- **[<code>GET</code> config](https://github.com/tmushayahama/panther-api/blob/master/api-documentation/endpoints/config/GET_config.md)**
 ​
 ## Development
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
