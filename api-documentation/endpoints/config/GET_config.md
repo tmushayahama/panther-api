@@ -49,22 +49,28 @@ None
             "LABEL": "Cellular Component",
             "DESCRIPTION": "We support CC complete"
           },
-          "PANTHER_GO_SLIM_MOLECULAR_PROCESS": {
+          "PANTHER_GO_SLIM_MOLECULAR_FUNCTION": {
+             "ID":"PANTHER_GO_SLIM_MF",
             "DESCRIPTION": "PANTHER GO SLIM Molecular Function terms"
           },
           "PANTHER_GO_SLIM_BIOLOGICAL_PROCESS": {
+            "ID":"PANTHER_GO_SLIM_BP",
             "DESCRIPTION": "PANTHER GO SLIM Biological Process terms"
           },
           "PANTHER_GO_SLIM_CELLULAR_COMPONENT": {
+            "ID":"PANTHER_GO_SLIM_CC",
             "DESCRIPTION": "PANTHER GO SLIM Cellular Component terms"
           },
           "PANTHER_PROTEIN_CLASS": {
+            "ID":"PANTHER_PROTEIN_CLASS",
             "DESCRIPTION": "PANTHER Protein Class Terms"
           },
           "PANTHER_PATHWAY": {
+            "ID":"PANTHER_PATHWAY",
             "DESCRIPTION": "PANTHER pathways"
           },
           "REACTOME": {
+            "ID":"REACTOME",
             "DESCRIPTION": "REACTOME pathways"
           }
         },
@@ -82,12 +88,14 @@ None
         },
         "CORRECTION":{
           "BONFERRONI": {
+            "ID": "BONFERRONI",
             "DESCRIPTION": "Only valid with TEST_TYPE BINOMIAL"
           }
         },
         "ORGANISM": {
           "HUMAN": {
-          "DESCRIPTION": "Use http://www.pantherdb.org/webservices/garuda/search.jsp?type=organism to get 5-letter code of supported organisms"
+            "ID": "HUMAN",
+            "DESCRIPTION": "Use http://www.pantherdb.org/webservices/garuda/search.jsp?type=organism to get 5-letter code of supported organisms"
           }
         },
         "FORMAT": {
