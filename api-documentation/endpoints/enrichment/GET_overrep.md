@@ -11,7 +11,7 @@ Returns Overrepresentation Test
 
 #### Query
 - **input** _(required)_ - List of reference genes to be used for the analysis.  List to be separated by newline unless **input_type** parameter is specified and set to 'VCF'
-- **input_type**  - Set to 'VCF' for Variant Call Format. Currently we support VCF version 4.0 formatthe list of reference genes to be used for the analysis
+- **input_type**  - Set to 'VCF' for Variant Call Format. Currently we support VCF version 4.0 formatted list of reference genes to be used for the analysis
 - **flanking_region** Max offset range for SNP position to gene position.  This is used if **input_type** parameter is set to 'VCF'.
 - **ontology** _(required)_ - Annotation Data Set. In addition to GO terms, PANTHER also supports PANTHER GO slim, PANTHER protein class, PANTHER pathways and Reactome Pathways.  Just using the GO id will not work.  We may want to register annotation data set types in identifiers.org
 - **species**  _(required)_ Use 5 letter species code
