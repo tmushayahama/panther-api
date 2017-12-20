@@ -33,8 +33,8 @@ None
 ``` json
 {
   "PANTHER_VERSION" : "13",
-  "API_VERSION": "1",
-  "DATA_VERSIONS": "13.2",
+  "PANTHER_API_VERSION": "2",
+  "DATA_VERSION": "13.2",
   "SUPPORTED_INPUT": {   
     "DATA_ANNOTATION_TYPE": {
         "ANNOT_TYPE_PANTHER_PATHWAY": {

@@ -92,3 +92,20 @@ None
     "test_type": "FISHER"
 }}
 ```
+
+
+## How to use
+
+**We recommend that you call ** [<code>GET</code> config](https://github.com/tmushayahama/panther-api/blob/master/api-documentation/endpoints/config/GET_config.md) to get all the configuration and data needed. FOr example supported organism
+
+### Example 
+
+### Javascript
+``` javascript
+  var config = getConfig();
+  var human = config.SUPPORTED_INPUT.ORGANISM.HUMAN.ID;
+  var bp = config.SUPPORTED_INPUT.DATA_ANNOTATION_TYPE.BIOLOGICAL_PROCES.ID;
+
+  var geneList = "abca1\tabca2";
+  var result = getOverrep(geneList, bp,  human);
+```
