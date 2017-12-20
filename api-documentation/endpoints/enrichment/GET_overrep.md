@@ -103,8 +103,8 @@ None
 ### Javascript
 ``` javascript
   var config = getConfig();
-  var human = config.SUPPORTED_INPUT.ORGANISM.HUMAN.ID;
-  var bp = config.SUPPORTED_INPUT.DATA_ANNOTATION_TYPE.BIOLOGICAL_PROCES.ID;
+  var human = config.supported_input.human.id;
+  var bp = config.supported_input.data_annotation_type.biological_process.id;
 
   var geneList = "abca1\tabca2";
   var result = getOverrep(geneList, bp,  human);
