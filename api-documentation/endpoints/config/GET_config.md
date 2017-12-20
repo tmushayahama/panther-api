@@ -31,7 +31,11 @@ None
 
 **Return** 
 ``` json
-{"SUPPORTED_INPUT": {
+{
+  "PANTHER_VERSION" : "13",
+  "API_VERSION": "1",
+  "DATA_VERSIONS": "13.2",
+  "SUPPORTED_INPUT": {   
     "DATA_ANNOTATION_TYPE": {
         "ANNOT_TYPE_PANTHER_PATHWAY": {
             "RELEASE_DATE": "2017-11-12",
@@ -40,42 +44,42 @@ None
             "LABEL": "ANNOT_TYPE_PANTHER_PATHWAY",
             "ID": "ANNOT_TYPE_ID_PANTHER_PATHWAY"
         },
-        "biological_process": {
+        "BIOLOGICAL_PROCESS": {
             "RELEASE_DATE": "2017-10-23",
             "VERSION": 1.2,
             "DESCRIPTION": "Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end. [GOC:go_curators, GOC:isa_complete]",
             "LABEL": "biological_process",
             "ID": "GO:0008150"
         },
-        "molecular_function": {
+        "MOLECULAR_FUNCTION": {
             "RELEASE_DATE": "2017-10-23",
             "VERSION": 1.2,
             "DESCRIPTION": "The actions of a single gene product or complex at the molecular level consisting of a single biochemical activity or multiple causally linked biochemical activities. A given gene product may exhibit one or more molecular functions. [GOC:go_curators]",
             "LABEL": "molecular_function",
             "ID": "GO:0003674"
         },
-        "PANTHER_GO_Slim_Biological_Process": {
+        "PANTHER_GO_SLIM_BIOLOGICAL_PROCESS": {
             "RELEASE_DATE": "2017-11-12",
             "VERSION": 13,
             "DESCRIPTION": "\"Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end.\" [GOC:go_curators, GOC:isa_complete]",
             "LABEL": "PANTHER_GO_Slim_Biological_Process",
             "ID": "ANNOT_TYPE_ID_PANTHER_GO_SLIM_BP"
         },
-        "PANTHER_GO_Slim_Molecular_Function": {
+        "PANTHER_GO_SLIM_MOLECULAR_FUNCTION": {
             "RELEASE_DATE": "2017-11-12",
             "VERSION": 13,
             "DESCRIPTION": "\"Elemental activities, such as catalysis or binding, describing the actions of a gene product at the molecular level. A given gene product may exhibit one or more molecular functions.\" [GOC:go_curators]",
             "LABEL": "PANTHER_GO_Slim_Molecular_Function",
             "ID": "ANNOT_TYPE_ID_PANTHER_GO_SLIM_MF"
         },
-        "cellular_component": {
+        "CELLULAR_COMPONENT": {
             "RELEASE_DATE": "2017-10-23",
             "VERSION": 1.2,
             "DESCRIPTION": "The part of a cell, extracellular environment or virus in which a gene product is located. A gene product may be located in one or more parts of a cell and its location may be as specific as a particular macromolecular complex, that is, a stable, persistent association of macromolecules that function together. [GOC:go_curators, NIF_Subcellular:sao-1337158144]",
             "LABEL": "cellular_component",
             "ID": "GO:0005575"
         },
-        "protein_class": {
+        "PROTEIN_CLASS": {
             "RELEASE_DATE": "2017-11-12",
             "VERSION": 13,
             "LABEL": "protein_class",
@@ -87,7 +91,7 @@ None
             "LABEL": "ANNOT_TYPE_REACTOME_PATHWAY",
             "ID": "ANNOT_TYPE_ID_REACTOME_PATHWAY"
         },
-        "PANTHER_GO_Slim_Cellular_Location": {
+        "PANTHER_GO_SLIM_CELLULAR_LOCATION": {
             "RELEASE_DATE": "2017-11-12",
             "VERSION": 13,
             "DESCRIPTION": "\"The part of a cell or its extracellular environment in which a gene product is located. A gene product may be located in one or more parts of a cell and its location may be as specific as a particular macromolecular complex, that is, a stable, persistent association of macromolecules that function together.\" [GOC:go_curators]",
@@ -95,24 +99,71 @@ None
             "ID": "ANNOT_TYPE_ID_PANTHER_GO_SLIM_CC"
         }
     },
-    "ORGANISM": {
+    "ORGANISM":{
+      "TRICA": {
+          "COMMON_NAME": "red flour beetle",
+          "LONG_NAME": "Tribolium castaneum",
+          "LABEL": "TRICA",
+          "ID": 7070
+      },
+      "NEUCR": {
+          "COMMON_NAME": "fungi",
+          "LONG_NAME": "Neurospora crassa",
+          "LABEL": "NEUCR",
+          "ID": 367110
+      }
+    }
+  },
+  "ORGANISM" : {
+    "VERSION": {
+      "13_1": {
+        "TRICA": {
+          "ID": 7070
+        },
+        "NEUCR": {
+          "ID": 367110
+        }
+      },
+      "13_2": {
+        "THEYD": {
+          "ID": 289376
+        },
+        "BACCR": {
+          "ID": 226900
+        },
+        "VIBCH": {
+          "ID": 243277
+        },
+      }
+    },
+    "ALL": {
         "TRICA": {
             "COMMON_NAME": "red flour beetle",
             "LONG_NAME": "Tribolium castaneum",
             "LABEL": "TRICA",
-            "ID": 7070
+            "ID": 7070,
+            "SUPPORTED_VERSIONS" : [
+              "13.1",
+              "13.2"
+            ]
         },
         "NEUCR": {
             "COMMON_NAME": "fungi",
             "LONG_NAME": "Neurospora crassa",
             "LABEL": "NEUCR",
-            "ID": 367110
+            "ID": 367110,
+            "SUPPORTED_VERSIONS" : [
+              "13.2"
+            ]
         },
         "THEYD": {
             "COMMON_NAME": "bacteria",
             "LONG_NAME": "Thermodesulfovibrio yellowstonii",
             "LABEL": "THEYD",
-            "ID": 289376
+            "ID": 289376,
+            "SUPPORTED_VERSIONS" : [
+              "13.3"
+            ]
         },
         "BACCR": {
             "COMMON_NAME": "bacillus cereus",
@@ -768,6 +819,7 @@ None
             "LABEL": "BRAFL",
             "ID": 7739
         }
+    },
     },
     "FORMAT": {
         "JSON": {"ID": "JSON"},
