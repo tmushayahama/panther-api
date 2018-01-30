@@ -10,19 +10,19 @@ var config = {
 };
 
 var corsOptions = {
-  credentials: true,
+  credentials: false,
   origin: function (origin, callback) {
     if (origin === undefined) {
       callback(null, false);
     } else {
-      var match = origin.match("^(.*)?.http://127.0.0.1(\:[0-9]+)?");
-      var allowed = (match !== null && match.length > 0);
-      callback(null, allowed);
+      //var match = origin.match("^(.*)?.http://127.0.0.1(\:[0-9]+)?");
+      // var allowed = (match !== null && match.length > 0);
+      callback(null, true);
     }
   }
 };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 
 
@@ -34,10 +34,10 @@ SwaggerExpress.create(config, function (err, swaggerExpress) {
   // install middleware
   swaggerExpress.register(app);
 
-  var port = process.env.PORT || 10011;
+  var port = 10012;
   app.listen(port);
 
-  if (swaggerExpress.runner.swagger.paths['/hello']) {
+  if (swaggerExpress.runner.swagger.paths['/overrep']) {
     console.log('Then, open a second command line and launch the editor with: "swagger project" edit');
   }
 });

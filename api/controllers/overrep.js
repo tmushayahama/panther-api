@@ -18,7 +18,7 @@ module.exports = {
 function getOverrep(req, res) {
   var ontology = "";
   var species = "HUMAN"
-  var corection = "bonferroni";
+  var correction = "bonferroni";
   var input = "fake%0AMSH2%0AMSH3";
 
   if (req.ontology == "GO:0003674") {
@@ -34,6 +34,7 @@ function getOverrep(req, res) {
   //console.log('Executing request: ' + url);
   request.get(url).pipe(res);
 
+  //return "fff";
   // this sends back a JSON response which is a single string
   //res.json("hello");
   /*
